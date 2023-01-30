@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .principal-container-home{
+   
+    display: flex;
+  
+} */
+
+.Left-container-home{
+    
+    height: auto;
+}
+
+.center-container-home{
+  
+    height: auto;
+    width: 100%;
+   
+}
+.btn-cart-red{
+    background-color: rgba(255, 0, 0, 0.886);
+    color: white;
+    padding: 0.6rem;
+    border-radius: 360%;
+    
+}
+.cards-container{
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+   
+}
+.search-name-container{
+width: 80%;
+background-color: rgb(239, 16, 16);
+margin-left: 6%;
+
+}
+.relationated-container{
+margin-top: 5rem;
+}
+.div-cart-container{
+    display: flex;
+    justify-content: space-between;
+   
+}
