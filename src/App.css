@@ -47,5 +47,20 @@ margin-top: 5rem;
 .div-cart-container{
     display: flex;
     justify-content: space-between;
-   
+}
+.price-car{
+    display: flex;
+    justify-content: space-between;
+}
+.quantity-container{
+    margin-right: 40%;
+    margin-bottom: 1rem;
+}
+.btn-cart-transp{
+    background-color: transparent;
+}
+.cart-selected{
+    font-size: 15px;
+    display: flex;
+    gap: 0.3rem;
 }
