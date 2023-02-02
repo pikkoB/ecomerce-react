@@ -62,5 +62,40 @@ margin-top: 5rem;
 .cart-selected{
     font-size: 15px;
     display: flex;
-    gap: 0.3rem;
+    
+}
+.box-cart{
+    border: 1px solid grey;
+    padding: 0.3rem;
+}
+.detail-carrucel{
+    margin-bottom: 3rem;
+}
+.purchase-container{
+    margin-left: 25%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.purchase-card-continer{
+    margin: 2rem 0 ;
+}
+.log-container{
+    width: 30%;
+    border-radius: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.258);
+    padding: 2rem;
+}
+.cart-product-container{
+    display: flex;
+    gap: 1rem;
+}
+.img-cart{
+    width: 50px;
+}
+.box-cart-cart{
+    border: 1px solid grey;
+    padding: 0.3rem;
+    margin-left: 30%;
 }

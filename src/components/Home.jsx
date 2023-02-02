@@ -80,7 +80,7 @@ const Home = () => {
                       />
                       <Card.Body>
                         <Card.Title> <b> {product.title} </b></Card.Title>
-                        <Card.Text>
+                        <Card.Body>
                         <div className='div-cart-container'>
                                                 <div>
                                                     <div>Price:</div>
@@ -88,7 +88,7 @@ const Home = () => {
                                                 </div>
                                                 <img className='btn-cart-red' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAeJJREFUSEvFlr1SFEEUhc8hB/EJhNBIjAx1fQJ8AjBhi0hDiYRIQ40oSYAn0Cdgl5BsiQiVJxA191BnvbPVtTU/PVuzTldt1W5PT3997z3n9hI9DfbERf9gSRsAHhUZIHm5zGzMIpZ0COB9ArsDMCA5WcYB6sDmjUkOlg12qv3x2AbwJr476nHX8FJxSVoH8DNg5yR3/wvYEElnAHYC+KID8K9UL5V2kmTYqANgusUrkt88UetjSVb0kw7hr0k6k41g1/Y0wEdW+QKHsE2fx3sPSdqmjWCL7AeAB4tYq06kjS1T0qfEWpskfZCsISnN2Ky+jRGHuu3t70H6TPJtFvWfMwqN3JIsesT09caIA+7auk6uj6Oe1qluRO+vPHAu2J3sa4BmymwA15YoCxxRu7a+vSYkn2ZEXKy/Jrk1v74NOL29LJo6kRnkiD1KM9QGnPbvpoDT5zPvppPZ4Eh3WrcceKULWoEDnn1h1F2ni4D3ADjtxyT/zIctaRXAvq1H8qQqLa3Akj4AeBebjUi+LAFf+C9TzH8keVAGbwtONxXJlRLw36QxlR4uu3MVm0tymr/E7xOSwxKwn3udx7Aq3a0iDnE9BrBG8qqqfpKeAfhN8qaTGuf4J3dN64hzN25a1xv4Hsq9sx9QXqmgAAAAAElFTkSuQmCC" />
                                             </div>
-                        </Card.Text>
+                        </Card.Body>
                       </Card.Body>
                     </Card>
                   </Col>

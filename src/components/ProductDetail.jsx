@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Card, Carousel, Col, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
+import { addProductThunk } from '../store/slices/cart.slice';
 import { filterProductsCartegoryThunk } from '../store/slices/products.slice';
 
 const ProductDetail = () => {
@@ -32,14 +33,26 @@ const ProductDetail = () => {
             });
     }, [id])
 
+    const addCart = () => {
+        const productAdd = {
+            "quantity": contCArt,
+            "productId": product.id,
+        }
+        
+        dispatch(addProductThunk(productAdd));
+    } 
+
+
+    // const [quantity, setQuantity] = useState()
+
     return (
         <div>
-            <h4>{product.title}</h4>
-            <Row>
+            <h6 className='detail-carrucel'>{product.title}</h6>
+            <Row >
                 <Col>
                     {/* //carrucel con imagenes */}
 
-                    <Carousel variant="dark">
+                    <Carousel variant="dark" slide={true}>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100, img-fluid "
@@ -91,15 +104,15 @@ const ProductDetail = () => {
                             <div className='quantity-container'>
                                 <p>Quantity </p>
                                 <div className='cart-selected'>
-                                    <div onClick={sumar}>+</div>
-                                    <div >{contCArt}</div>
-                                    <div onClick={restar}>-</div>
+                                    <div  className='box-cart' onClick={sumar}>+</div>
+                                    <div className='box-cart'>  {contCArt}  </div>
+                                    <div className='box-cart' onClick={restar}>-</div>
                                 </div>
 
                             </div>
                         </div>
                         <div className="d-grid gap-2">
-                            <Button variant="danger" size="sm">
+                            <Button onClick={addCart} variant="danger" size="sm">
                                Add to cart <img className='btn-cart-transp' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAeJJREFUSEvFlr1SFEEUhc8hB/EJhNBIjAx1fQJ8AjBhi0hDiYRIQ40oSYAn0Cdgl5BsiQiVJxA191BnvbPVtTU/PVuzTldt1W5PT3997z3n9hI9DfbERf9gSRsAHhUZIHm5zGzMIpZ0COB9ArsDMCA5WcYB6sDmjUkOlg12qv3x2AbwJr476nHX8FJxSVoH8DNg5yR3/wvYEElnAHYC+KID8K9UL5V2kmTYqANgusUrkt88UetjSVb0kw7hr0k6k41g1/Y0wEdW+QKHsE2fx3sPSdqmjWCL7AeAB4tYq06kjS1T0qfEWpskfZCsISnN2Ky+jRGHuu3t70H6TPJtFvWfMwqN3JIsesT09caIA+7auk6uj6Oe1qluRO+vPHAu2J3sa4BmymwA15YoCxxRu7a+vSYkn2ZEXKy/Jrk1v74NOL29LJo6kRnkiD1KM9QGnPbvpoDT5zPvppPZ4Eh3WrcceKULWoEDnn1h1F2ni4D3ADjtxyT/zIctaRXAvq1H8qQqLa3Akj4AeBebjUi+LAFf+C9TzH8keVAGbwtONxXJlRLw36QxlR4uu3MVm0tymr/E7xOSwxKwn3udx7Aq3a0iDnE9BrBG8qqqfpKeAfhN8qaTGuf4J3dN64hzN25a1xv4Hsq9sx9QXqmgAAAAAElFTkSuQmCC" />
                             </Button>
 
@@ -109,6 +122,7 @@ const ProductDetail = () => {
             </Row>
 
             <div className='relationated-container'>
+                <h4>Discover Similar items</h4>
 
                 <Row xs={2} md={3} lg={5} className="g-4">
                     {listSuggested.map(itemSuggested => (
@@ -121,7 +135,7 @@ const ProductDetail = () => {
                                 />
                                 <Card.Body>
                                     <Card.Title> <b> {itemSuggested.title} </b></Card.Title>
-                                    <Card.Text>
+                                    <Card.Body>
 
                                         <div className='div-cart-container'>
                                             <div>
@@ -131,7 +145,7 @@ const ProductDetail = () => {
                                             <img className='btn-cart-red' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAeJJREFUSEvFlr1SFEEUhc8hB/EJhNBIjAx1fQJ8AjBhi0hDiYRIQ40oSYAn0Cdgl5BsiQiVJxA191BnvbPVtTU/PVuzTldt1W5PT3997z3n9hI9DfbERf9gSRsAHhUZIHm5zGzMIpZ0COB9ArsDMCA5WcYB6sDmjUkOlg12qv3x2AbwJr476nHX8FJxSVoH8DNg5yR3/wvYEElnAHYC+KID8K9UL5V2kmTYqANgusUrkt88UetjSVb0kw7hr0k6k41g1/Y0wEdW+QKHsE2fx3sPSdqmjWCL7AeAB4tYq06kjS1T0qfEWpskfZCsISnN2Ky+jRGHuu3t70H6TPJtFvWfMwqN3JIsesT09caIA+7auk6uj6Oe1qluRO+vPHAu2J3sa4BmymwA15YoCxxRu7a+vSYkn2ZEXKy/Jrk1v74NOL29LJo6kRnkiD1KM9QGnPbvpoDT5zPvppPZ4Eh3WrcceKULWoEDnn1h1F2ni4D3ADjtxyT/zIctaRXAvq1H8qQqLa3Akj4AeBebjUi+LAFf+C9TzH8keVAGbwtONxXJlRLw36QxlR4uu3MVm0tymr/E7xOSwxKwn3udx7Aq3a0iDnE9BrBG8qqqfpKeAfhN8qaTGuf4J3dN64hzN25a1xv4Hsq9sx9QXqmgAAAAAElFTkSuQmCC" />
                                         </div>
 
-                                    </Card.Text>
+                                    </Card.Body>
                                 </Card.Body>
                             </Card>
                         </Col>
