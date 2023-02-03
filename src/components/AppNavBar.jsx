@@ -19,7 +19,7 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar expand="lg" variant="dark" bg="primary" size="lg">
+      <Navbar expand="lg" variant="dark" bg="primary" size="lg" fixed="top">
         <Container>
           <Navbar.Brand as={Link} to="/">
             E-comerce App

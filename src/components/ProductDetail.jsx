@@ -40,7 +40,8 @@ const ProductDetail = () => {
         }
         
         dispatch(addProductThunk(productAdd));
-    } 
+    }
+
 
 
     // const [quantity, setQuantity] = useState()
@@ -83,7 +84,7 @@ const ProductDetail = () => {
                                 style={{ height: 350, objectFit: 'contain' }}
                             />
 
-                            <Carousel.Caption>
+                            <Carousel.Caption style={{color:"red"}}>
                     
                             </Carousel.Caption>
                         </Carousel.Item>

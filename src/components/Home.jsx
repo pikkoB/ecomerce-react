@@ -34,7 +34,7 @@ const Home = () => {
     <div className='principal-container-home'>
 
       <Row>
-        <Col lg={3} className='Left-container-home'>
+        <Col lg={3} className='Left-container-home' style={{marginTop:"5rem"}}>
 
           <div className='categoy-container'>
             <h3>Category</h3>
@@ -48,7 +48,7 @@ const Home = () => {
           </div>
 
         </Col>
-        <Col lg={9} className='center-container-home'>
+        <Col lg={9} className='center-container-home' style={{marginTop:"5rem"}}>
 
           <div>
             <h1>Home</h1>

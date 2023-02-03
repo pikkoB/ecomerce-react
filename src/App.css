@@ -22,7 +22,7 @@
    
 }
 .btn-cart-red{
-    background-color: rgba(255, 0, 0, 0.886);
+    background-color: rgba(239, 16, 16, 0.818);
     color: white;
     padding: 0.6rem;
     border-radius: 360%;
@@ -33,7 +33,6 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 4rem;
-   
 }
 .search-name-container{
 width: 80%;
@@ -60,7 +59,7 @@ margin-top: 5rem;
     background-color: transparent;
 }
 .cart-selected{
-    font-size: 15px;
+    font-size: 10px;
     display: flex;
     
 }
@@ -98,4 +97,17 @@ margin-top: 5rem;
     border: 1px solid grey;
     padding: 0.3rem;
     margin-left: 30%;
+}
+.price-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.buton-check-container{
+    position: fixed;
+    bottom: 0;
+    right: 3rem;
+    width: 300px;
+    border-top: 1px solid gray;
+    
 }

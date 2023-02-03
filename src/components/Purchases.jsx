@@ -7,7 +7,7 @@ import { getPurchasesThunk } from '../store/slices/purchases.slice';
 const Purchases = () => {
 
     const purchases = useSelector(state => state.purchases);
-    console.log(purchases)
+   
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getPurchasesThunk());
@@ -26,7 +26,7 @@ const Purchases = () => {
                     <Card.Body>
                         <div className='purchase-container'>
                             
-                            <p>{purchase.product.title}</p>
+                            <p style={{ width: "68%" }}>{purchase.product.title}</p>
                             <p>{purchase.quantity}</p>
                             <p>{purchase.product.price}</p>
                         </div>
