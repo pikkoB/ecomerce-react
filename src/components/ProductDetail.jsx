@@ -47,7 +47,7 @@ const ProductDetail = () => {
     // const [quantity, setQuantity] = useState()
 
     return (
-        <div>
+        <div className='container-detail-comp'>
             <h6 className='detail-carrucel'>{product.title}</h6>
             <Row >
                 <Col>
